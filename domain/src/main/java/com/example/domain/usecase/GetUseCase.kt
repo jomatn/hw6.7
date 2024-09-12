@@ -1,10 +1,11 @@
 package com.example.domain.usecase
 
 import com.example.domain.model.Task
+import com.example.domain.model.TaskEntityModel
 import com.example.domain.repository.TaskRepository
 
 class GetUseCase(private val taskRepository: TaskRepository) {
-    suspend fun execute(taskId: Int): Task? {
+    suspend operator fun invoke(taskId: Int): TaskEntityModel? {
         return taskRepository.getTaskById(taskId)
     }
 }

@@ -3,6 +3,7 @@ package com.example.hw67.presentetion.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.domain.model.Task
+import com.example.domain.model.TaskEntityModel
 import com.example.domain.usecase.DeleteUseCase
 import com.example.domain.usecase.GetUseCase
 import com.example.domain.usecase.InsertUseCase
@@ -14,15 +15,15 @@ class TaskViewModel(
     private val deleteTaskUseCase: DeleteUseCase
 ) : ViewModel() {
 
-    fun insertTask(task: Task) {
+    fun insertTask(task: TaskEntityModel) {
         viewModelScope.launch {
-            insertTaskUseCase.execute(task)
+            insertTaskUseCase.invoke(task)
         }
     }
 
     fun getTaskById(taskId: Int) {
         viewModelScope.launch {
-            getTaskUseCase.execute(taskId)
+            getTaskUseCase.invoke(taskId)
         }
     }
 

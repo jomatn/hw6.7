@@ -1,4 +1,4 @@
-package com.example.hw67.presentetion.ui.fragment
+package com.example.hw67.presentetion.ui.fragment.task
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
-import com.example.hw67.R
 import com.example.hw67.databinding.FragmentTaskBinding
 import com.example.hw67.presentetion.viewModel.TaskViewModel
 

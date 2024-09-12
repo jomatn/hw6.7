@@ -1,6 +1,6 @@
 package com.example.domain.model
 
-data class Task(
+data class TaskEntityModel(
     val taskId: Long = -1,
     val taskName: String = String(),
     val description: String = String(),

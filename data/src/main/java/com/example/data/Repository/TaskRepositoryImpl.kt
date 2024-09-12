@@ -5,7 +5,7 @@ import com.example.data.model.TaskEntity
 import com.example.domain.model.Task
 import com.example.domain.repository.TaskRepository
 
-class Repository(private val taskDao: TaskDao) : TaskRepository {
+class TaskRepositoryImpl(private val taskDao: TaskDao) : TaskRepository {
 
      override suspend fun insertTask(task: Task) {
         taskDao.insertTask(task.toEntity())

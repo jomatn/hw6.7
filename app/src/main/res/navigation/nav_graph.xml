@@ -7,16 +7,32 @@
 
     <fragment
         android:id="@+id/taskFragment"
-        android:name="com.example.hw67.presentetion.ui.fragment.TaskFragment"
+        android:name="com.example.hw67.presentetion.ui.fragment.task.TaskFragment"
         android:label="fragment_task"
         tools:layout="@layout/fragment_task" >
         <action
             android:id="@+id/action_taskFragment_to_secondTaskFragment"
             app:destination="@id/secondTaskFragment" />
+        <action
+            android:id="@+id/action_taskFragment_to_createTaskFragment"
+            app:destination="@id/createTaskFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondTaskFragment"
-        android:name="com.example.hw67.presentetion.ui.fragment.SecondTaskFragment"
+        android:name="com.example.hw67.presentetion.ui.fragment.secondTask.SecondTaskFragment"
         android:label="fragment_second_task"
-        tools:layout="@layout/fragment_second_task" />
+        tools:layout="@layout/fragment_second_task">
+    <argument
+    android:name="id"
+    app:argType="integer" />
+</fragment>
+    <fragment
+        android:id="@+id/createTaskFragment"
+        android:name="com.example.hw67.presentetion.ui.fragment.createTask.createTaskFragment"
+        android:label="fragment_create_task"
+        tools:layout="@layout/fragment_create_task" >
+        <argument
+        android:name="id"
+        app:argType="integer" />
+    </fragment>
 </navigation>
